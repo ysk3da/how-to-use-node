@@ -1,0 +1,17 @@
+{
+  "name": "how-to-use-node",
+  "version": "1.0.0",
+  "description": "公式サイト: [Node.js](https://nodejs.org/ja/)",
+  "main": "index.js",
+  "scripts": {
+    "csv2json": "node libs/csv2json.js",
+    "json2csv": "node libs/json2csv.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv2json": "^2.0.2",
+    "json2csv": "^5.0.7"
+  }
+}
