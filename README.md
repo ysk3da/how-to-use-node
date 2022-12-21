@@ -328,7 +328,8 @@ const { Transform } = require('json2csv');
 - const fields = ['field1', 'field2', 'field3'];
 + const fields = ['連番', '氏名', '氏名（カタカナ）', '性別', '電話番号', '生年月日'];
 // Windowsで文字化けしないようにオプションを追加します。
-const opts = { fields, withBOM: true };
+- const opts = { fields };
++ const opts = { fields, withBOM: true };
 const transformOpts = { highWaterMark: 16384, encoding: 'utf-8' };
 
 // 入力パスが未定義なので定義します。
