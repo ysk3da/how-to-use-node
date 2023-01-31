@@ -1,12 +1,15 @@
 const { createReadStream, createWriteStream, readFileSync } = require('fs');
 const { Transform } = require('json2csv');
 
+// ファイル名の設定
+const targetFile = 'feature1-230131';
+
 // 各項目は手動で設定する必要があります。-> 自動化（※深度1だけなので注意）
 // let fields = ['連番', '氏名', '氏名（カタカナ）', '性別', '電話番号', '生年月日'];
 let fields = [];
 
 // 入力パスが未定義なので定義します。
-const inputPath = 'json/data.json';
+const inputPath = `json/${targetFile}.json`;
 // jsonファイルのテキストを取得
 const jsonText = readFileSync(inputPath, 'utf-8');
 // keyの取得
@@ -23,7 +26,7 @@ fields = Object.keys(jsonParsed[0]);
 // console.log(`chideKeyList=${Object.keys(jsonParsed[0])} `);
 
 // 出力パスが未定義なので定義します。
-const outputPath = 'csv/data.csv';
+const outputPath = `csv/${targetFile}.csv`;
 
 // Windowsで文字化けしないようにオプションを追加します。
 const opts = { fields, withBOM: true };
